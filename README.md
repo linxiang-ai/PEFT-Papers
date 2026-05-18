@@ -2,12 +2,12 @@
 
 [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
-[![Last Update](https://img.shields.io/github/last-commit/YOUR_USERNAME/PEFT-Papers)](https://github.com/YOUR_USERNAME/PEFT-Papers/commits/main)
-[![Papers](https://img.shields.io/badge/papers-100+-green.svg)]()
+[![Last Update](https://img.shields.io/github/last-commit/linxiang-ai/PEFT-Papers)](https://github.com/linxiang-ai/PEFT-Papers/commits/main)
+[![Papers](https://img.shields.io/badge/papers-42-green.svg)]()
 
 > A curated, structured database of papers on **Parameter-Efficient Fine-Tuning (PEFT)** for large pre-trained models. Designed for researchers who need to navigate the rapidly evolving PEFT landscape.
 
-📊 **Current stats**: 120+ papers · 6 method families · 5 application domains · Updated weekly
+📊 **Current stats**: 42 papers · 6 method families · 4 application domains · Updated weekly via CI
 
 ---
 
@@ -25,23 +25,22 @@ Unlike typical awesome lists, this repository:
 
 ## 🚀 Quick Start for Researchers
 
-**New to PEFT?** → Start with [`SURVEY.md`](SURVEY.md) — our overview of the field
-
 **Looking for a specific paper?** → Browse:
-- [By Method](papers/by-method/) — LoRA family, Adapter, Prompt Tuning, etc.
+- [By Method](papers/by-method/) — LoRA family, Adapter, Prompt Tuning, Selective, Hybrid, Quantization-aware
 - [By Year](papers/by-year/) — Chronological view of the field
 - [By Domain](papers/by-domain/) — NLP, Vision, Multimodal, Diffusion
 - [By Venue](papers/by-venue/) — Top conference papers
+- [Must-Read](papers/must-read.md) — Foundational + must-read entries
 
-**Want to compare methods?** → See [`benchmarks.md`](benchmarks.md)
+**Need quick context?** → See [Method Taxonomy](#-method-taxonomy) below.
 
-**Need code implementations?** → See [`implementations.md`](implementations.md)
+> 📝 Planned: `SURVEY.md` (method evolution narrative), `benchmarks.md` (cross-method comparison), `implementations.md` (full library catalog).
 
 ---
 
 ## 📚 Method Taxonomy
 
-![PEFT Taxonomy](figures/taxonomy.png)
+_(Taxonomy diagram TBD — will live at `figures/taxonomy.png`.)_
 
 PEFT methods can be grouped into four main paradigms:
 
@@ -70,12 +69,7 @@ If you're starting out, read these in order:
 
 ## 🆕 Recent Additions
 
-<!-- This section is auto-updated by GitHub Actions -->
-
-| Date | Paper | Method | Venue |
-|------|-------|--------|-------|
-| 2026-05-10 | *Placeholder* | LoRA variant | arXiv |
-| 2026-05-03 | *Placeholder* | MoE-PEFT | ICML 2026 |
+A weekly arXiv scan is scheduled in [`.github/workflows/weekly-update.yml`](.github/workflows/weekly-update.yml). Every Monday it opens a PR with a curated review queue of new PEFT papers — see [open PRs](https://github.com/linxiang-ai/PEFT-Papers/pulls).
 
 ---
 
@@ -108,16 +102,16 @@ We welcome contributions! See [`CONTRIBUTING.md`](CONTRIBUTING.md) for:
 - Metadata format requirements
 - Review process
 
-To suggest a paper: [open an issue](https://github.com/YOUR_USERNAME/PEFT-Papers/issues/new?template=add-paper.md) using the template.
+To suggest a paper: [open an issue](https://github.com/linxiang-ai/PEFT-Papers/issues/new?template=add-paper.md) using the template.
 
 ---
 
 ## 📊 Statistics
 
-- Total papers: 120+
-- Papers from top venues (NeurIPS/ICML/ICLR/ACL): 60+
-- Papers with official code: 80+
-- Last updated: auto-generated
+- Total papers: **42**
+- Top-venue papers (NeurIPS / ICML / ICLR / ACL / EMNLP / CVPR): **29**
+- Papers with official open-source code: **36**
+- Last updated: see commit log
 
 ---
 
@@ -127,11 +121,11 @@ If this repository helps your research, please consider citing:
 
 ```bibtex
 @misc{peft-papers,
-  author = {Your Name},
+  author = {Lin Xiang},
   title = {PEFT-Papers: A Structured Collection of Parameter-Efficient Fine-Tuning Research},
   year = {2026},
   publisher = {GitHub},
-  url = {https://github.com/YOUR_USERNAME/PEFT-Papers}
+  url = {https://github.com/linxiang-ai/PEFT-Papers}
 }
 ```
 
@@ -139,9 +133,7 @@ If this repository helps your research, please consider citing:
 
 ## 📬 Contact
 
-- Issues & PRs: welcome!
-- Email: your.email@example.com
-- Twitter/X: @your_handle
+- Issues & PRs: welcome — file at [github.com/linxiang-ai/PEFT-Papers/issues](https://github.com/linxiang-ai/PEFT-Papers/issues)
 
 ---
 
