@@ -1,0 +1,116 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "PEFT Papers Schema",
+  "description": "Schema for a single PEFT paper entry in papers.json",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "required": [
+      "id",
+      "title",
+      "authors",
+      "venue",
+      "year",
+      "paper_url",
+      "category",
+      "domain",
+      "key_idea",
+      "open_source",
+      "added_date"
+    ],
+    "additionalProperties": false,
+    "properties": {
+      "id": {
+        "type": "string",
+        "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$",
+        "description": "Unique kebab-case identifier, e.g. 'lora-2022'"
+      },
+      "title": {
+        "type": "string",
+        "minLength": 1
+      },
+      "authors": {
+        "type": "array",
+        "items": { "type": "string", "minLength": 1 },
+        "minItems": 1
+      },
+      "venue": {
+        "type": "string",
+        "description": "Publication venue, e.g. ICLR, NeurIPS, arXiv"
+      },
+      "year": {
+        "type": "integer",
+        "minimum": 1990,
+        "maximum": 2100
+      },
+      "arxiv": {
+        "type": ["string", "null"],
+        "pattern": "^\\d{4}\\.\\d{4,5}(v\\d+)?$",
+        "description": "arXiv ID only, e.g. '2106.09685'"
+      },
+      "paper_url": {
+        "type": "string",
+        "format": "uri"
+      },
+      "code_url": {
+        "type": ["string", "null"],
+        "format": "uri"
+      },
+      "category": {
+        "type": "array",
+        "items": {
+          "type": "string",
+          "enum": [
+            "additive",
+            "adapter-family",
+            "soft-prompt",
+            "reparameterization",
+            "lora-family",
+            "selective",
+            "hybrid",
+            "other"
+          ]
+        },
+        "minItems": 1
+      },
+      "domain": {
+        "type": "array",
+        "items": {
+          "type": "string",
+          "enum": ["nlp", "vision", "multimodal", "diffusion", "speech", "other"]
+        },
+        "minItems": 1
+      },
+      "backbone": {
+        "type": "array",
+        "items": { "type": "string" },
+        "description": "Models the method was tested on, e.g. 'GPT-3', 'RoBERTa'"
+      },
+      "key_idea": {
+        "type": "string",
+        "minLength": 1,
+        "description": "One-sentence English summary"
+      },
+      "trainable_params_ratio": {
+        "type": "string",
+        "description": "Trainable parameter ratio, e.g. '0.01%-0.1%' or 'varies'"
+      },
+      "open_source": {
+        "type": "string",
+        "enum": ["official", "community", "none"]
+      },
+      "tags": {
+        "type": "array",
+        "items": {
+          "type": "string",
+          "enum": ["foundational", "must-read", "new", "survey", "benchmark"]
+        }
+      },
+      "added_date": {
+        "type": "string",
+        "format": "date",
+        "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
+      }
+    }
+  }
+}
